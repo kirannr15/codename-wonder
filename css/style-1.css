@@ -591,7 +591,7 @@ section.main-banner {
 .section__over {
   position: relative;
   padding: 7rem 0;
-  /* background-image: url("../assets/images/wonder/content-bg.jpg"); */
+  background-image: url("../assets/images/wonder/content-bg.jpg");
 }
 
 .section__over::after {
@@ -601,7 +601,7 @@ section.main-banner {
   height: 12%;
   top: 5%;
   right: -45px;
-  background: url(../assets/images/wonder/logo%20transparent%20Bg.png) no-repeat center center / contain;
+  /* background: url(../assets/images/icon/right-half.svg) no-repeat center center / contain; */
   opacity: 0.4;
 }
 
@@ -612,7 +612,7 @@ section.main-banner {
   height: 12%;
   bottom: 3%;
   left: -50px;
-  background: url(../assets/images/wonder/logo%20transparent%20Bg.png) no-repeat center center / contain;
+  /* background: url(../assets/images/icon/left-half.svg) no-repeat center center / contain; */
   opacity: 0.3;
 }
 
@@ -971,7 +971,7 @@ section.main-banner {
 .section__master {
   position: relative;
   padding: 7rem 0;
-  /* background-image: url("../assets/images/wonder/content-bg.jpg"); */
+  background-image: url("../assets/images/wonder/content-bg.jpg");
   background-position: left bottom;
 }
 
