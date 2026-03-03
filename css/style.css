@@ -532,7 +532,7 @@ section.main-banner {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background: #858389;
+  background: #000;
   opacity: 0.7;
   padding: 0.5%;
 
