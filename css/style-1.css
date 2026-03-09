@@ -246,7 +246,7 @@ video {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0.1rem 8rem;
+  padding: 0rem 8rem;
   border-bottom: 1px solid var(--primary-pink);
   /* background: var(--primary); */
   /* background: rgba(47, 41, 104, 0.9) 29%; */
@@ -983,25 +983,38 @@ section.main-banner {
   line-height: 140%;
   letter-spacing: 1.44px;
   text-transform: uppercase;
-  text-align: center;
+  /* text-align: center; */
 }
 .mast_div h3 {
   font-family: var(--playfair);
   font-weight: 500;
-  font-size: 3vw;
+  font-size: 1.5vw;
   color: var(--primary);
   line-height: 140%;
   letter-spacing: 1.44px;
   text-transform: uppercase;
-  text-align: center;
+  /* text-align: center; */
+}
+.mast_div h4 {
+  font-family: var(--playfair);
+  font-weight: 500;
+  font-size: 1.3vw;
+  color: var(--primary);
+  line-height: 140%;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+  /* text-align: center; */
 }
 
+.mast_div{
+  width: 90%;
+}
 .mast_div p {
   font-family: var(--playfair);
   font-weight: 500;
   font-size: 18px;
   color: var(--primary);
-  text-align: center;
+  /* text-align: center; */
 }
 
 .confg-text-wrapper {
@@ -1920,4 +1933,103 @@ section.section-thankyou {
   100% {
       margin-left: -800px
   }
+}
+
+
+
+/* Section */
+.amenities{
+  padding:20px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:50px;
+  color:#222;
+}
+
+/* Grid */
+.amenities-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* Cards */
+.amenity-card{
+  background:#fff;
+  padding:35px;
+  border-radius:12px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  transition:all .3s ease;
+}
+
+.amenity-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.amenity-card h3{
+  margin-bottom:20px;
+  font-size:22px;
+}
+
+/* List */
+.amenity-card ul{
+  list-style:none;
+  padding:0;
+}
+
+.amenity-card li{
+  margin:12px 0;
+  font-size:16px;
+  color:#555;
+  display:flex;
+  align-items:center;
+}
+
+.amenity-card li::before{
+  content:"✔";
+  color:#2ecc71;
+  margin-right:10px;
+}
+
+/* Card colors */
+.kids{
+  border-top:4px solid #ff6b6b;
+}
+
+.professionals{
+  border-top:4px solid #4dabf7;
+}
+
+.seniors{
+  border-top:4px solid #51cf66;
+}
+
+/* Lifestyle box */
+.overall-lifestyle{
+  margin-top:60px;
+  text-align:center;
+  padding:40px;
+  background:#222;
+  color:white;
+  border-radius:12px;
+}
+
+.overall-lifestyle h3{
+  font-size:26px;
+  margin-bottom:10px;
+}
+
+.overall-lifestyle strong{
+  font-size:28px;
+}
+
+.overall-lifestyle p{
+  font-size:18px;
+  margin:8px 0;
 }
