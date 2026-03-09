@@ -14,7 +14,8 @@
   font-family: "PlayfairDisplay-Regular";
   src: url(../assets/fonts/PlayfairDisplay-Regular.ttf);
 }
-
+/* font-family: "Jost", sans-serif; */
+/* font-family: "Cinzel", serif; */
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -250,7 +251,8 @@ video {
   border-bottom: 1px solid var(--primary-pink);
   /* background: var(--primary); */
   /* background: rgba(47, 41, 104, 0.9) 29%; */
-  background: #24232373;
+  /* background: #24232373; */
+  background: #3e3948;
   gap: 1rem;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -280,6 +282,7 @@ video {
   width: 135px;
   max-width: 100%;
   position: relative;
+  padding: 10px 0;
 }
 
 .navLinks {
@@ -378,6 +381,7 @@ video {
   -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
+  background: #3e3948;
 }
 
 .offcanvas-logo {
@@ -475,7 +479,7 @@ video {
 }
 
 section.main-banner {
-  /* margin: 5.25rem 0 0 0; */
+  margin: 5.25rem 0 0 0;
 }
 
 .main-banner .carousel-item img {
@@ -505,7 +509,8 @@ section.main-banner {
 }
 
 .ban_title h2 {
-  font-family: var(--playfair);
+  /* font-family: var(--playfair); */
+  font-family: "Cinzel", serif;
   font-size: 3vw;
   color: var(--primary-pink);
   line-height: 140%;
@@ -525,7 +530,7 @@ section.main-banner {
 
 .ban_title_top {
   position: absolute;
-  top: 14%;
+  top: 20%;
   right: 0%;
   width: 17%;
   left: 4%;
@@ -639,7 +644,8 @@ section.main-banner {
 }
 
 .over_div h2 {
-  font-family: var(--playfair);
+  /* font-family: var(--playfair); */
+  font-family: "Cinzel", serif;
   font-size: 2.2vw;
   color: var(--primary);
   line-height: 140%;
@@ -681,7 +687,8 @@ section.main-banner {
 }
 
 .where_div h2 {
-  font-family: var(--playfair);
+  /* font-family: var(--playfair); */
+  font-family: "Cinzel", serif;
   font-size: 2.5vw;
   color: var(--primary);
   line-height: 140%;
@@ -722,14 +729,15 @@ section.main-banner {
   padding: 7rem 0 4rem 0;
   background-color: var(--primary);
   /* background-image: url(../assets/images/icon/trns-leaf.svg), url(../assets/images/icon/trns-bot.svg); */
-  background-image: url(https://multigenindia.in/assets/img/banner/bg-award.webp);
+  /* background-image: url(https://multigenindia.in/assets/img/banner/bg-award.webp); */
   background-position: top, bottom;
   background-size: 100%;
   background-repeat: repeat-x;
 }
 
 .ameni_div h2 {
-  font-family: var(--playfair);
+  /* font-family: var(--playfair); */
+  font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 3vw;
   color: var(--primary-pink);
@@ -755,6 +763,7 @@ section.main-banner {
   text-align: center;
   gap: 1rem;
   padding: 1rem;
+  height:200px;
 }
 
 .ameni_icon img {
@@ -858,10 +867,12 @@ section.main-banner {
   flex-direction: column;
   gap: 25px;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .config_para h2 {
-  font-family: var(--play-fair);
+  /* font-family: var(--play-fair); */
+  font-family: "Cinzel", serif;
   font-size: 35px;
   color: var(--primary);
   line-height: 140%;
@@ -976,7 +987,8 @@ section.main-banner {
 }
 
 .mast_div h2 {
-  font-family: var(--playfair);
+  /* font-family: var(--playfair); */
+  font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 3vw;
   color: var(--primary);
@@ -1075,7 +1087,8 @@ section.main-banner {
 }
 
 .section__master .nav-pills .nav-link h2 {
-  font-family: var(--play-fair);
+  /* font-family: var(--play-fair); */
+  font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 32px;
   color: var(--primary);
@@ -1135,7 +1148,8 @@ section.main-banner {
 }
 
 .loc_div h2 {
-  font-family: var(--playfair);
+  /* font-family: var(--playfair); */
+  font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 2.5vw;
   color: var(--primary-pink);
@@ -1258,7 +1272,8 @@ section.main-banner {
 }
 
 .abt_title h2 {
-  font-family: var(--playfair);
+  /* font-family: var(--playfair); */
+  font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 3vw;
   color: var(--primary-pink);
@@ -1374,7 +1389,7 @@ section.main-banner {
 .map_con {
   position: absolute;
   height: 100%;
-  width: 70%;
+  width: 50%;
   top: 0;
   right: 0;
   z-index: 2;
@@ -1392,7 +1407,7 @@ section.main-banner {
   height: 100%;
   width: 100%;
   inset: 0;
-  background: linear-gradient(90deg, #FFFBEE 36.48%, rgba(255, 251, 238, 0.75) 53.58%, rgba(255, 251, 238, 0.50) 70.68%, rgba(255, 251, 238, 0.25) 87.77%, rgba(255, 251, 238, 0.00) 104.87%);
+  /* background: linear-gradient(90deg, #FFFBEE 36.48%, rgba(255, 251, 238, 0.75) 53.58%, rgba(255, 251, 238, 0.50) 70.68%, rgba(255, 251, 238, 0.25) 87.77%, rgba(255, 251, 238, 0.00) 104.87%); */
   pointer-events: none;
 }
 
@@ -1415,7 +1430,8 @@ section.main-banner {
 }
 
 .con_div h2 {
-  font-family: var(--playfair);
+  /* font-family: var(--playfair); */
+  font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 2.5vw;
   color: var(--primary);
@@ -1519,7 +1535,8 @@ footer {
 }
 
 .modal-logo h2 {
-  font-family: var(--playfair);
+  /* font-family: var(--playfair); */
+  font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 1.8rem;
   color: var(--primary-pink);
@@ -1763,11 +1780,25 @@ section.section-thankyou {
 
 .desc_over .title-codename{
   
-    font-size: 32px;
+  font-family: "Cinzel", serif;
+  font-size: 2.5vw;
+  color: var(--primary);
+  line-height: 140%;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
   
 }
-
-
+@media (max-width:768px){
+.desc_over .title-codename{
+  font-size: 40px;
+}
+.section__master.master_plan{
+  padding-bottom: 0;
+}
+.brd_mast{
+  border: 0;
+}
+}
 #clouds {
   z-index: 1;
   position: absolute;
@@ -2032,4 +2063,78 @@ section.section-thankyou {
 .overall-lifestyle p{
   font-size:18px;
   margin:8px 0;
+}
+
+.fortuna-intro-section{
+  width:100%;
+  padding:90px 20px;
+  background-image: url("../assets/images/wonder/content-bg.jpg");
+  background-position: bottom left;
+}
+
+@media (max-width:768px){
+  .fortuna-intro-section{
+  padding-bottom: 20px;    
+  }
+
+}
+.fortuna-intro-container{
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+}
+
+.fortuna-intro-container h2{
+  font-size:42px;
+  font-weight:600;
+  margin-bottom:25px;
+  letter-spacing:1px;
+  font-family: "Cinzel", serif;
+}
+
+.fortuna-highlight{
+  font-size:26px;
+  line-height:1.6;
+  color:#444;
+  margin-bottom:10px;
+  font-weight:400;
+  font-family: "Jost", sans-serif;
+}
+
+.fortuna-desc{
+  font-size:18px;
+  color:#666;
+  margin-bottom:15px;
+  font-family: "Jost", sans-serif;
+}
+
+.fortuna-points{
+  font-size:18px;
+  font-weight:500;
+  color:#111;
+  letter-spacing:0.5px;
+  font-family: "Jost", sans-serif;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+.fortuna-intro-container h2{
+  font-size:32px;
+}
+
+.fortuna-highlight{
+  font-size:20px;
+}
+
+.fortuna-desc,
+.fortuna-points{
+  font-size:16px;
+}
+
+}
+
+.owl-carousel .owl-item img{
+  max-height: 305px;
 }

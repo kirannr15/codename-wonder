@@ -156,7 +156,8 @@
     }
 
     .section__loc {
-        padding-top: 5rem;
+        /* padding-top: 5rem; */
+        /* padding-bottom: 40px; */
     }
 
     .loc_div {
@@ -222,7 +223,7 @@
     }
 
     section.main-banner {
-        /* margin: 4.5rem 0 0 0; */
+        margin: 6.5rem 0 0 0;
     }
 
 
