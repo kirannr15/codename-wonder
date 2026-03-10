@@ -17,7 +17,7 @@
 /* font-family: "Jost", sans-serif; */
 /* font-family: "Cinzel", serif; */
 .montserrat {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -35,9 +35,9 @@
 :root {
   --light: #ffffff;
   --dark: #000;
-  --playfair: "PlayfairDisplay-Regular";
+  /* --playfair: "PlayfairDisplay-Regular";
   --playfairiltalic: "PlayfairDisplay-Italic";
-  --helve: "HelveticaNeue";
+  --helve: "HelveticaNeue"; */
   --radius-1: 16px;
   --radius-full: 100px;
   /* --primary: #82743f; */
@@ -56,7 +56,7 @@ body {
   -o-transition: all 0.45s ease;
   transition: all 0.45s ease;
   padding-right: 0px !important;
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   background: #FFFBEE;
 }
 
@@ -299,9 +299,9 @@ video {
 }
 
 .navLinks .navLink {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
   display: block;
   color: var(--primary-pink);
   text-transform: capitalize;
@@ -340,7 +340,7 @@ video {
 }
 
 .btn-contact {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--primary-pink);
   padding: 12px 35px;
@@ -441,7 +441,7 @@ video {
 .offcanvas-link {
   display: block;
   font-size: 1.35rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 400;
   color: var(--primary-pink);
   text-transform: capitalize;
@@ -509,7 +509,7 @@ section.main-banner {
 }
 
 .ban_title h2 {
-  /* font-family: var(--playfair); */
+  /* font-family: "Jost", sans-serif; */
   font-family: "Cinzel", serif;
   font-size: 3vw;
   color: var(--primary-pink);
@@ -519,12 +519,13 @@ section.main-banner {
 }
 
 .ban_title p {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--light);
 }
 .ban_title h1{
   color: #b9ceeb;
+  font-family: "Cinzel", serif;
 }
 
 
@@ -544,7 +545,7 @@ section.main-banner {
 }
 
 .ban_title_top h3 {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-size: 1vw;
   color: var(--primary-pink);
   line-height: 100%;
@@ -555,7 +556,7 @@ section.main-banner {
 }
 
 .ban_title_top p {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-size: 14px;
   color: var(--light);
   margin: 0;
@@ -630,7 +631,7 @@ section.main-banner {
 
 .section__over .nav-link img {
   /* width: 85%; */
-  width: auto;
+  width: 160px;
   height: 170px;
 }
 
@@ -644,7 +645,7 @@ section.main-banner {
 }
 
 .over_div h2 {
-  /* font-family: var(--playfair); */
+  /* font-family: "Jost", sans-serif; */
   font-family: "Cinzel", serif;
   font-size: 2.2vw;
   color: var(--primary);
@@ -654,14 +655,14 @@ section.main-banner {
 }
 
 .over_div p {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--primary);
 }
 
 .btn-enq {
   width: fit-content;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--primary);
   padding: 20px 40px;
@@ -687,7 +688,7 @@ section.main-banner {
 }
 
 .where_div h2 {
-  /* font-family: var(--playfair); */
+  /* font-family: "Jost", sans-serif; */
   font-family: "Cinzel", serif;
   font-size: 2.5vw;
   color: var(--primary);
@@ -697,7 +698,7 @@ section.main-banner {
 }
 
 .where_div p {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--primary);
   text-align: end;
@@ -715,7 +716,7 @@ section.main-banner {
 }
 
 .desc_para p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--primary);
 }
@@ -736,7 +737,7 @@ section.main-banner {
 }
 
 .ameni_div h2 {
-  /* font-family: var(--playfair); */
+  /* font-family: "Jost", sans-serif; */
   font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 3vw;
@@ -748,7 +749,7 @@ section.main-banner {
 }
 
 .ameni_div p {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: var(--primary-pink);
@@ -772,7 +773,7 @@ section.main-banner {
 }
 
 .ameni_icon p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--primary-pink);
 }
@@ -798,7 +799,7 @@ section.main-banner {
 
 .btn_ameni {
   width: fit-content;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--primary-pink);
   padding: 14px 40px;
@@ -821,7 +822,7 @@ section.main-banner {
 
 .btn_req {
   width: fit-content;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--primary-pink);
   padding: 25px 50px;
@@ -881,7 +882,7 @@ section.main-banner {
 }
 
 .config_para p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: var(--primary);
@@ -897,7 +898,7 @@ section.main-banner {
 
 .btn_check {
   width: fit-content;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 15px;
   color: var(--primary);
   padding: 17px 34px;
@@ -987,7 +988,7 @@ section.main-banner {
 }
 
 .mast_div h2 {
-  /* font-family: var(--playfair); */
+  /* font-family: "Jost", sans-serif; */
   font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 3vw;
@@ -998,7 +999,7 @@ section.main-banner {
   /* text-align: center; */
 }
 .mast_div h3 {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 1.5vw;
   color: var(--primary);
@@ -1008,7 +1009,7 @@ section.main-banner {
   /* text-align: center; */
 }
 .mast_div h4 {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 1.3vw;
   color: var(--primary);
@@ -1022,7 +1023,7 @@ section.main-banner {
   width: 90%;
 }
 .mast_div p {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: var(--primary);
@@ -1112,7 +1113,7 @@ section.main-banner {
 
 .btn_dwnld {
   width: fit-content;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 16px;
   color: var(--primary);
   padding: 25px 35px;
@@ -1148,7 +1149,7 @@ section.main-banner {
 }
 
 .loc_div h2 {
-  /* font-family: var(--playfair); */
+  /* font-family: "Jost", sans-serif; */
   font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 2.5vw;
@@ -1159,7 +1160,7 @@ section.main-banner {
 }
 
 .loc_div p {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: var(--light);
@@ -1205,7 +1206,7 @@ section.main-banner {
 }
 
 .accordion-body p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 14px;
   color: var(--light);
 }
@@ -1216,7 +1217,7 @@ section.main-banner {
 
 .btn_accord {
   width: fit-content;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--primary-pink);
   padding: 28px 40px;
@@ -1272,7 +1273,7 @@ section.main-banner {
 }
 
 .abt_title h2 {
-  /* font-family: var(--playfair); */
+  /* font-family: "Jost", sans-serif; */
   font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 3vw;
@@ -1283,7 +1284,7 @@ section.main-banner {
 }
 
 .abt_title p {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: var(--light);
@@ -1308,7 +1309,7 @@ section.main-banner {
 }
 
 .abt_div p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 20px;
   color: var(--light);
 }
@@ -1430,7 +1431,7 @@ section.main-banner {
 }
 
 .con_div h2 {
-  /* font-family: var(--playfair); */
+  /* font-family: "Jost", sans-serif; */
   font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 2.5vw;
@@ -1441,7 +1442,7 @@ section.main-banner {
 }
 
 .con_div p {
-  font-family: var(--playfair);
+  font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: var(--primary);
@@ -1453,11 +1454,11 @@ section.main-banner {
   border: none;
   border-bottom: 1px solid rgba(43, 77, 106, 0.50);
   border-radius: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 .con_form .form-check-label {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 14px;
   color: var(--primary);
 }
@@ -1476,7 +1477,7 @@ footer {
 }
 
 .disc p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 16px;
   color: #F3ECE3;
   text-align: center;
@@ -1484,7 +1485,7 @@ footer {
 }
 
 .rera1 p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: var(--primary-pink);
@@ -1505,7 +1506,7 @@ footer {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 1rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 16px;
   color: #F3ECE3;
 }
@@ -1525,7 +1526,7 @@ footer {
 }
 
 .modal-body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 .modal-logo {
@@ -1535,7 +1536,7 @@ footer {
 }
 
 .modal-logo h2 {
-  /* font-family: var(--playfair); */
+  /* font-family: "Jost", sans-serif; */
   font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 1.8rem;
@@ -1546,7 +1547,7 @@ footer {
 }
 
 .modal-logo p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: var(--light);
@@ -1577,7 +1578,7 @@ footer {
 }
 
 .term_para p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 14px;
   color: var(--light);
 }
@@ -1611,7 +1612,7 @@ footer {
 }
 
 .primary-button .form-txt {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--light);
 }
@@ -1644,7 +1645,7 @@ footer {
 }
 
 .primary-button1 .form-txt {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 18px;
   color: var(--light);
 }
@@ -1684,7 +1685,7 @@ footer {
   background-color: var(--primary-pink);
   /* color: var(--light); */
   color: #000;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 16px;
   text-align: center;
   padding: 12px 24px;
@@ -2141,3 +2142,24 @@ section.section-thankyou {
 .owl-carousel .owl-item img{
   max-height: 305px;
 }
+
+.fortuna-highlights{
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  margin-top:20px;
+  }
+  
+  .highlight-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:16px;
+  font-weight:500;
+  color:#333;
+  }
+  
+  .highlight-box img{
+  width:28px;
+  height:28px;
+  }
