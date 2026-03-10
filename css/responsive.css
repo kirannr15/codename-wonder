@@ -83,7 +83,7 @@
     }
     .main-banner .carousel-item img {
         /* height: auto; */
-        height: 400px;
+        height: auto;
     object-fit: cover;
     }
 
