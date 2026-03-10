@@ -2189,11 +2189,13 @@ section.section-thankyou {
   gap: 20px;
   margin-top: 25px;
 }
+
 @media (max-width:768px) {
-.overview-highlights{
-  grid-template-columns: repeat(1, 1fr);
+  .overview-highlights {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
-}
+
 .overview-item {
   display: flex;
   align-items: center;
