@@ -1798,6 +1798,9 @@ section.section-thankyou {
 .brd_mast{
   border: 0;
 }
+.owl-carousel .owl-item img{
+  max-height: 280px;
+}
 }
 #clouds {
   z-index: 1;

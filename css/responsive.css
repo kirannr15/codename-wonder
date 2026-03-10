@@ -82,7 +82,9 @@
         font-size: 18px;
     }
     .main-banner .carousel-item img {
-        height: auto;
+        /* height: auto; */
+        height: 400px;
+    object-fit: cover;
     }
 
     .ban_title {
@@ -140,9 +142,11 @@
     }
 
     .config_div {
-        padding: 2rem;
+        padding: 0;
     }
-
+    .mast_div{
+        width: 100%;
+    }
     .brd_mast,
     .master_img video {
         height: auto;
@@ -297,7 +301,7 @@
     .con_div h2,
     .mast_div h2,
     .abt_title h2 {
-        font-size: 6.5vw;
+        font-size: 32px;
     }
 
     .whereimg {
@@ -374,7 +378,7 @@
     }
 
     .section__master .nav-pills .nav-link h2 {
-        font-size: 25px;
+        font-size: 32px;
     }
 
 }

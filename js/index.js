@@ -137,12 +137,25 @@ document.addEventListener("DOMContentLoaded", function () {
 //   });
 // }
 
+// function scrollInto(id) {
+//   let elmnt = document.getElementById(id);
+//   elmnt.scrollIntoView({
+//     behavior: "smooth",
+//     block: "start",
+//     inline: "nearest",
+//   });
+// }
+
 function scrollInto(id) {
-  let elmnt = document.getElementById(id);
-  elmnt.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-    inline: "nearest",
+  const element = document.getElementById(id);
+  const offset = 80;
+
+  const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+  const offsetPosition = elementPosition - offset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
   });
 }
 
