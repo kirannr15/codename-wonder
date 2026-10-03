@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeySafari | Toddler Keyboard Game</title>
+    <meta name="description" content="Play KeySafari, a free toddler keyboard game with colorful shapes, animal letters, rainbow trails and bubble popping. No account or download needed.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#E6DDED">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="KeySafari">
+    <meta property="og:title" content="KeySafari | Toddler Keyboard Game">
+    <meta property="og:description" content="Explore colorful shapes, animal letters and bubble popping with KeySafari. Free browser play for toddlers and parents, with no account or download.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="KeySafari | Free Toddler Keyboard Game">
+    <meta name="twitter:description" content="Colorful keyboard play, animal letters and bubble popping for toddlers and parents. Free to play, with no account or download.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <!-- Add the final HTTPS canonical URL, og:url and sharing image before launch.
+         See SEO-LAUNCH.md. Do not publish a guessed domain. -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "KeySafari",
+        "description": "A free browser-based toddler keyboard game with animated shapes and letters, animal letter exploration, color trails, and bubble popping for supervised play.",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Any operating system with a compatible web browser",
+        "browserRequirements": "Requires JavaScript. Sound and fullscreen depend on browser support.",
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": [
+            "Keyboard-triggered shapes and letters",
+            "Animal letters and synthesized sounds",
+            "Color trails and touch splashes",
+            "Bubble popping with a counter",
+            "Optional sound and supported-browser fullscreen"
+        ]
+    }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#about">Skip to game information</a>
+    <!-- Landing Page -->
+    <main id="landing-page">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg-shapes">
+                <div class="bg-shape shape-1"></div>
+                <div class="bg-shape shape-2"></div>
+                <div class="bg-shape shape-3"></div>
+                <div class="bg-shape shape-4"></div>
+                <div class="bg-shape shape-5"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="app-name">KeySafari</h1>
+                <p class="tagline">A toddler keyboard game</p>
+                <p class="description">Turn keyboard smashing into colorful shapes, letters, and playful sounds. Explore together with a parent—no account or download needed.</p>
+                <button class="cta-button" id="start-playing-btn">
+                    <span class="cta-icon">▶</span>
+                    Start Playing
+                </button>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <h2 class="section-title">How to Play KeySafari</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="25" width="60" height="40" rx="8" fill="#E6DDED"/>
+                            <rect x="18" y="33" width="12" height="10" rx="3" fill="#C9B8D9"/>
+                            <rect x="34" y="33" width="12" height="10" rx="3" fill="#C9B8D9"/>
+                            <rect x="50" y="33" width="12" height="10" rx="3" fill="#C9B8D9"/>
+                            <rect x="22" y="47" width="36" height="10" rx="3" fill="#C9B8D9"/>
+                            <circle cx="60" cy="20" r="8" fill="#FFF3D6"/>
+                            <text x="57" y="24" font-size="12" fill="#5C4D4D">✋</text>
+                        </svg>
+                    </div>
+                    <h3>Press any key</h3>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="35" r="15" fill="#FFDDE1"/>
+                            <circle cx="55" cy="30" r="12" fill="#C5DEF5"/>
+                            <circle cx="40" cy="55" r="18" fill="#D4EED4"/>
+                            <rect x="15" y="45" width="14" height="14" rx="3" fill="#FFF3D6" transform="rotate(15 15 45)"/>
+                        </svg>
+                    </div>
+                    <h3>See colors & shapes</h3>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="25" fill="#E6DDED"/>
+                            <path d="M30 35 Q40 25 50 35 Q40 45 30 35" fill="#C9B8D9"/>
+                            <circle cx="32" cy="42" r="3" fill="#C5DEF5"/>
+                            <circle cx="40" cy="48" r="4" fill="#C5DEF5"/>
+                            <circle cx="48" cy="44" r="3" fill="#C5DEF5"/>
+                            <path d="M25 55 Q30 50 35 55" stroke="#D4EED4" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M45 55 Q50 50 55 55" stroke="#FFDDE1" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Hear fun sounds</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Play Modes Section -->
+        <section class="play-modes">
+            <h2 class="section-title">Explore the Keyboard Play Modes</h2>
+            <div class="modes-container">
+                <div class="mode-card" data-mode="animal">
+                    <div class="mode-icon">🐶</div>
+                    <h3>Animal Mode</h3>
+                    <p class="mode-badge">Explore letters together</p>
+                    <ul class="mode-features">
+                        <li>A → Ant, B → Bear, C → Cat</li>
+                        <li>Letter keys show animals and synthesized tones</li>
+                        <li>Name the letters and animals together</li>
+                    </ul>
+                    <button class="play-now-btn" data-mode="animal">
+                        <span>▶</span> Play Now
+                    </button>
+                </div>
+                <div class="mode-card" data-mode="color">
+                    <div class="mode-icon">🎨</div>
+                    <h3>Color Splash Mode</h3>
+                    <p class="mode-badge">Visual engagement</p>
+                    <ul class="mode-features">
+                        <li>Background changes per key</li>
+                        <li>Mouse = rainbow trail</li>
+                        <li>Touch = splash effect</li>
+                    </ul>
+                    <button class="play-now-btn" data-mode="color">
+                        <span>▶</span> Play Now
+                    </button>
+                </div>
+                <div class="mode-card" data-mode="bubble">
+                    <div class="mode-icon">🫧</div>
+                    <h3>Bubble Pop Mode</h3>
+                    <p class="mode-badge">Fun interaction</p>
+                    <ul class="mode-features">
+                        <li>Floating bubbles</li>
+                        <li>Click → pop + count</li>
+                        <li>Very fun + simple gameplay</li>
+                    </ul>
+                    <button class="play-now-btn" data-mode="bubble">
+                        <span>▶</span> Play Now
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2 class="section-title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🖥️</div>
+                    <h3>Fullscreen mode</h3>
+                    <p>Distraction-free play</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Shapes & letters</h3>
+                    <p>Animated feedback for key presses</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔊</div>
+                    <h3>Gentle sounds</h3>
+                    <p>Toggle option available</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⌨️</div>
+                    <h3>Keyboard & touch</h3>
+                    <p>Interaction options vary by play mode</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>No setup</h3>
+                    <p>Just click and play</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parent Notes Section -->
+        <section class="parent-notes">
+            <h2 class="section-title">For Parents</h2>
+            <div class="notes-container">
+                <div class="note">
+                    <span class="note-icon">👶</span>
+                    <p>For supervised play together, not independent screen time. Prioritize hands-on play for under-2s.</p>
+                </div>
+                <div class="note">
+                    <span class="note-icon">👀</span>
+                    <p>Always supervise your child during play</p>
+                </div>
+                <div class="note">
+                    <span class="note-icon">📺</span>
+                    <p>Use comfortable brightness and low volume. Take breaks. Fullscreen does not block all browser or system shortcuts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Illustrative activity map; not real visitor analytics -->
+        <section class="community-section" aria-labelledby="community-title">
+            <div class="community-panel">
+                <div class="community-heading">
+                    <div>
+                        <p class="community-eyebrow">PLAY, DISCOVER, EXPLORE</p>
+                        <h2 id="community-title">Play around the world</h2>
+                    </div>
+                   
+                </div>
+                <p class="community-description">A world of color, curiosity, and keyboard fun.</p>
+                <div class="community-stats">
+                    <div class="community-stat">
+                        <svg class="community-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 4a3 3 0 0 1 0 6M21 21v-3a6 6 0 0 0-4-5.65"/></svg>
+                        <strong id="demo-user-count" aria-describedby="activity-map-note">—</strong>
+                      
+                    </div>
+                </div>
+                <div class="community-map">
+                    <svg viewBox="0 0 1000 500" role="img" aria-labelledby="world-map-title world-map-description">
+                        <title id="world-map-title">World activity map</title>
+                        <desc id="world-map-description">A stylized world map showing generated illustrative activity, not real visitor locations.</desc>
+                        <defs>
+                            <pattern id="map-grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#DDE4E9" stroke-width="1"/>
+                            </pattern>
+                        </defs>
+                        <rect width="1000" height="500" rx="24" fill="#EFF4F7"/>
+                        <rect width="1000" height="500" rx="24" fill="url(#map-grid)"/>
+                        <g class="map-land" aria-hidden="true">
+                            <path d="M45 85 L110 60 160 75 210 60 265 105 290 145 250 180 220 190 200 230 165 245 145 205 110 195 90 150 55 140 Z"/>
+                            <path d="M195 230 L230 245 255 280 240 310 210 285 Z"/>
+                            <path d="M260 285 L315 280 350 320 335 355 315 405 285 465 265 420 250 365 Z"/>
+                            <path d="M345 50 L405 35 430 65 405 110 370 120 Z"/>
+                            <path d="M465 110 L500 85 545 90 580 125 555 150 530 160 505 145 480 165 455 145 Z"/>
+                            <path d="M460 190 L515 175 565 200 595 260 565 320 535 380 500 365 470 300 450 240 Z"/>
+                            <path d="M560 95 L630 65 730 60 820 75 925 110 950 155 895 185 850 170 810 220 775 240 750 195 715 240 695 285 665 235 625 210 605 160 570 145 Z"/>
+                            <path d="M760 275 L790 290 815 310 845 320 830 335 790 320 Z"/>
+                            <path d="M820 350 L870 325 920 355 935 400 900 425 840 415 815 385 Z"/>
+                            <path d="M945 425 L958 410 968 430 950 452 Z"/>
+                            <path d="M600 345 L610 335 615 370 603 385 Z"/>
+                            <path d="M875 205 L888 185 895 210 880 230 Z"/>
+                        </g>
+                        <g id="activity-map-markers"></g>
+                    </svg>
+                  
+                </div>
+                <ul id="activity-location-list" class="activity-location-list" aria-label="Simulated players by location"></ul>
+                <p class="community-disclaimer" id="activity-map-note">Illustrative activity: generated counts and locations are not real-time visitor data.</p>
+                <noscript><p>Enable JavaScript to see illustrative map activity.</p></noscript>
+            </div>
+        </section>
+
+        <section id="about" class="information-section" aria-labelledby="about-title">
+            <div class="information-container">
+                <h2 id="about-title" class="section-title">About KeySafari</h2>
+                <p>KeySafari is a free online keyboard playground for toddlers and their parents. Press keys to create animated shapes and letters, explore animal letters, make colorful trails, or pop floating bubbles. It is playful exploration—not a typing lesson, developmental assessment, or vision aid.</p>
+                <p>The Start Playing button opens the shapes-and-letters game. Animal Mode responds to letter keys; Color Splash Mode responds to keys, mouse movement, and touch; Bubble Pop Mode lets you click or tap bubbles and use keys to create more. Use the sound button to mute audio, and press Escape or select the exit button to leave play mode.</p>
+
+                <h2 id="faq-title" class="section-title information-subheading">KeySafari Questions & Answers</h2>
+                <div class="faq-list" aria-labelledby="faq-title">
+                    <details>
+                        <summary>Is KeySafari free to play?</summary>
+                        <p>Yes. All four keyboard play modes are free on this page, with no account, app installation, or download required.</p>
+                    </details>
+                    <details>
+                        <summary>Is this a typing game or a keyboard smash game?</summary>
+                        <p>KeySafari is a keyboard smash game with visual and sound feedback. There are no typing tests, speed targets, or lessons. Animal Mode also lets parents explore letter-to-animal names together.</p>
+                    </details>
+                    <details>
+                        <summary>Can we play on a phone or tablet?</summary>
+                        <p>Touch interaction is available for shapes, color splashes, and bubble popping. Letter input works best with a physical keyboard. Fullscreen and audio availability depend on your browser and device.</p>
+                    </details>
+                    <details>
+                        <summary>Can I mute the sounds or leave fullscreen?</summary>
+                        <p>Yes. Select the speaker button to toggle sound. Press Escape or select the exit button to return to this page. Keep device volume low before starting.</p>
+                    </details>
+                    <details>
+                        <summary>Does KeySafari protect a computer from every shortcut?</summary>
+                        <p>No. The game prevents many default key actions while playing, but browsers cannot block every browser or operating-system shortcut. Always supervise and keep important work saved.</p>
+                    </details>
+                    <details>
+                        <summary>Do the colors make screen time safe for toddlers?</summary>
+                        <p>No color palette guarantees eye comfort or suitable screen time. Use age-appropriate guidance, comfortable room lighting, short shared sessions, and breaks. Stop if your child seems uncomfortable.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="privacy" class="information-section privacy-section" aria-labelledby="privacy-title">
+            <div class="information-container">
+                <h2 id="privacy-title" class="section-title">Privacy on This Page</h2>
+                <p>KeySafari does not ask for an account, name, or device location. The current game code does not send keyboard input to an analytics service or track visits. The world map displays generated illustrations, not real players or their locations.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-brand">KeySafari</p>
+                <nav class="footer-links" aria-label="Page information">
+                    <a href="#about">About</a>
+                    <a href="#faq-title">FAQ</a>
+                    <a href="#privacy">Privacy</a>
+                </nav>
+                <p class="footer-note">Made with ♥ for little explorers</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Play Area (Hidden by default) -->
+    <div id="play-area" class="hidden" tabindex="-1" role="region" aria-label="KeySafari playground">
+        <div class="play-controls">
+            <button id="mute-btn" class="control-btn" title="Toggle Sound" aria-label="Mute sound" aria-pressed="false">
+                <span class="sound-on" aria-hidden="true">🔊</span>
+                <span class="sound-off hidden" aria-hidden="true">🔇</span>
+            </button>
+            <button id="exit-btn" class="control-btn exit-btn" title="Exit Play Mode" aria-label="Exit play mode">✕</button>
+        </div>
+        
+        <!-- Default Play Mode (original shapes + letters) -->
+        <div id="default-mode" class="game-mode">
+            <div id="animation-container"></div>
+         <div class="play-hint">
+                <p>Press any key to play!</p>
+            </div>
+        </div>
+        
+        <!-- Animal Mode Game Area -->
+        <div id="animal-mode" class="game-mode hidden">
+            <div class="animal-display">
+                <div class="letter-display" id="animal-letter">A</div>
+                <div class="animal-emoji" id="animal-emoji">🐜</div>
+                <div class="animal-name" id="animal-name">Ant</div>
+            </div>
+            <div class="mode-hint">
+                <p>Press any letter key!</p>
+            </div>
+        </div>
+        
+        <!-- Color Splash Mode Game Area -->
+        <div id="color-mode" class="game-mode hidden">
+            <div id="rainbow-canvas"></div>
+            <div id="splash-container"></div>
+            <div class="mode-hint">
+                <p>Move mouse for trails! Click for splash!</p>
+            </div>
+        </div>
+        
+        <!-- Bubble Pop Mode Game Area -->
+        <div id="bubble-mode" class="game-mode hidden">
+            <div id="bubble-container"></div>
+            <div class="bubble-score">
+                <span class="score-label">Popped:</span>
+                <span id="bubble-count">0</span>
+                <span class="bubble-emoji">🫧</span>
+            </div>
+            <div class="mode-hint">
+                <p>Pop the bubbles!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
