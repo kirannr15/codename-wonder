@@ -1008,12 +1008,6 @@ document.addEventListener('keydown', (e) => {
         return;
     }
     if (!isPlaying) return;
-
-    // Hide play hint when user presses a key
-    const playHint = document.querySelector('.play-hint');
-    if (playHint) {
-        playHint.classList.add('hidden');
-    }
     
     // ESC to exit
     if (e.key === 'Escape') {
