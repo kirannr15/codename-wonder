@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8f6ef">
+    <title>KeySafari | A little garden of play</title>
+    <meta name="description" content="A playful keyboard garden for little explorers. Discover animals, colorful shapes and bubbles together with a parent.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <main id="landing-page" class="garden-home">
+        <header class="garden-header garden-wrap">
+            <a href="#" class="garden-brand" aria-label="KeySafari home"><span class="brand-flower" aria-hidden="true">✿</span> KeySafari<span class="brand-dot">.</span></a>
+            <nav class="garden-nav" aria-label="Main navigation">
+                <a href="#garden-modes">Play modes</a>
+                <a href="#garden-parents">For parents</a>
+                <button class="play-now-btn garden-nav-play" type="button" data-mode="default">Let’s play <span aria-hidden="true">↗</span></button>
+            </nav>
+        </header>
+
+        <section class="garden-hero garden-wrap" aria-labelledby="garden-title">
+            <div class="garden-hero-copy">
+                <p class="garden-eyebrow"><span aria-hidden="true">☀</span> LITTLE KEYS. BIG DISCOVERIES.</p>
+                <h1 id="garden-title">A little wonder.<br>A lot of <span class="garden-play-word">play.<svg viewBox="0 0 250 25" fill="none" aria-hidden="true"><path d="M5 17Q115 -4 245 12" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg></span></h1>
+                <p class="garden-intro">A happy little space where every key brings something new. Meet an animal, chase a color, or pop a bubble—just for the joy of it.</p>
+                <div class="garden-hero-actions">
+                    <button id="start-playing-btn" class="garden-primary" type="button"><span aria-hidden="true">▶</span> Start playing <span aria-hidden="true">↗</span></button>
+                    <a href="#garden-modes" class="garden-secondary">Explore the modes <span aria-hidden="true">↓</span></a>
+                </div>
+                <p class="garden-small-note"><span aria-hidden="true">♡</span> Free to explore. No account. Play together.</p>
+            </div>
+            <div class="garden-art" role="img" aria-label="A playful garden with a bear, letters, colorful shapes, and bubbles">
+                <div class="art-sun">☀</div>
+                <div class="art-cloud cloud-one"></div><div class="art-cloud cloud-two"></div>
+                <div class="art-note"><span aria-hidden="true">✦</span> Every key is a surprise!</div>
+                <div class="art-letter art-a">A</div>
+                <div class="art-animal"><span class="art-bear">🐻</span><span class="art-animal-tag">B is for Bear</span></div>
+                <div class="art-letter art-b">B</div>
+                <div class="art-flower">✿</div><div class="art-star">★</div>
+                <div class="art-bubble bubble-one"></div><div class="art-bubble bubble-two"></div><div class="art-bubble bubble-three"></div>
+                <div class="art-hill hill-back"></div><div class="art-hill hill-front"></div>
+                <div class="art-keyboard" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>✦</span><span>♡</span></div>
+            </div>
+        </section>
+
+        <div class="garden-ribbon" aria-label="Play features"><div class="garden-wrap"><span>✦ Soft colors</span><span>♫ Playful sounds</span><span>⌨ Keyboard & touch</span><span>♡ Made for exploring together</span></div></div>
+
+        <section id="garden-modes" class="garden-modes garden-wrap" aria-labelledby="garden-modes-title">
+            <div class="garden-section-heading"><div><p class="garden-eyebrow">PICK YOUR LITTLE ADVENTURE</p><h2 id="garden-modes-title">What shall we discover?</h2></div><p>Four ways to play.<br>No scores to chase. Just curiosity.</p></div>
+            <div class="garden-mode-grid">
+                <article class="garden-mode-card garden-shapes mode-card" data-mode="default">
+                    <div class="garden-card-scene shapes-scene" aria-hidden="true"><span>★</span><span>●</span><span>▲</span><span>♡</span></div>
+                    <div class="garden-card-copy"><span class="garden-card-label">A HAPPY FIRST ADVENTURE</span><h3>Shapes & letters</h3><p>Little taps become colorful surprises. Every key is welcome here.</p><button class="play-now-btn garden-card-button" type="button" data-mode="default">Let’s make shapes <span aria-hidden="true">↗</span></button></div>
+                </article>
+                <article class="garden-mode-card garden-animals mode-card" data-mode="animal">
+                    <div class="garden-card-scene animals-scene" aria-hidden="true"><span>🦁</span><span class="scene-letter">L</span><span class="scene-spark">✦</span></div>
+                    <div class="garden-card-copy"><span class="garden-card-label">HELLO, LITTLE FRIENDS</span><h3>Animal alphabet</h3><p>A for Ant, B for Bear. Meet a new friend with every letter.</p><button class="play-now-btn garden-card-button" type="button" data-mode="animal">Meet the animals <span aria-hidden="true">↗</span></button></div>
+                </article>
+                <article class="garden-mode-card garden-colors mode-card" data-mode="color">
+                    <div class="garden-card-scene colors-scene" aria-hidden="true"><span></span><span></span><span></span><span>✦</span></div>
+                    <div class="garden-card-copy"><span class="garden-card-label">A SPLASH OF IMAGINATION</span><h3>Color trails</h3><p>Wiggle, tap, and paint the screen with a trail of rainbow colors.</p><button class="play-now-btn garden-card-button" type="button" data-mode="color">Follow the colors <span aria-hidden="true">↗</span></button></div>
+                </article>
+                <article class="garden-mode-card garden-bubbles mode-card" data-mode="bubble">
+                    <div class="garden-card-scene bubbles-scene" aria-hidden="true"><span></span><span></span><span></span><span>✧</span></div>
+                    <div class="garden-card-copy"><span class="garden-card-label">ONE MORE LITTLE POP</span><h3>Bubble pop</h3><p>Catch the floaty bubbles. Tap, pop, giggle. And do it all again.</p><button class="play-now-btn garden-card-button" type="button" data-mode="bubble">Pop some bubbles <span aria-hidden="true">↗</span></button></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="garden-how garden-wrap" aria-labelledby="garden-how-title">
+            <div class="garden-how-intro"><p class="garden-eyebrow">SMALL STEPS, HAPPY MOMENTS</p><h2 id="garden-how-title">Ready, set,<br>discover.</h2><p>No instructions to learn.<br>Just a little room to explore.</p></div>
+            <ol class="garden-steps"><li><span class="garden-step-icon" aria-hidden="true">⌨</span><div><span class="garden-step-number">01</span><h3>Press or tap</h3><p>Let little fingers lead the way.</p></div></li><li><span class="garden-step-icon" aria-hidden="true">✿</span><div><span class="garden-step-number">02</span><h3>Find a surprise</h3><p>A shape, an animal, a splash of color.</p></div></li><li><span class="garden-step-icon" aria-hidden="true">♡</span><div><span class="garden-step-number">03</span><h3>Enjoy it together</h3><p>Make a little moment of wonder.</p></div></li></ol>
+        </section>
+
+        <section id="garden-parents" class="garden-parent-section garden-wrap" aria-labelledby="garden-parent-title">
+            <div class="garden-parent-art" aria-hidden="true">🌱<span>Room to grow.<br>Room to play.</span></div>
+            <div><p class="garden-eyebrow">A LITTLE NOTE FOR GROWN-UPS</p><h2 id="garden-parent-title">Playful by design.<br>Simple on purpose.</h2><p>This is a space for supervised play, not a lesson or a test. Explore together, follow their curiosity, and take a break whenever you need.</p><ul class="garden-parent-checks"><li>✓ No account or downloads</li><li>✓ Sound you can switch off</li><li>✓ Optional 2, 5, or 10 minute play timer</li><li>✓ Soft pastel design, without eye-safety claims</li></ul></div>
+        </section>
+
+        <section class="garden-last-call garden-wrap"><span aria-hidden="true">✦</span><div><h2>A tiny adventure is waiting.</h2><p>Let’s see what the next key brings.</p></div><button class="play-now-btn garden-primary" type="button" data-mode="default">Let’s play <span aria-hidden="true">↗</span></button></section>
+        <footer class="garden-footer garden-wrap"><a href="#" class="garden-brand"><span class="brand-flower" aria-hidden="true">✿</span> KeySafari.</a><p>Made with a little love for little explorers.</p><a href="#garden-parents">For parents ↑</a></footer>
+    </main>
+
+    <!-- Shared game engine: play happens here, never on another page. -->
+    <div id="play-area" class="hidden" tabindex="-1" role="region" aria-label="KeySafari playground">
+        <div class="play-controls">
+            <div class="battery-control">
+                <button id="battery-btn" class="control-btn" title="Set play timer" aria-label="Set play timer" aria-expanded="false" aria-controls="battery-options"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="21" height="14" rx="3"/><path d="M26 11v6M7 11v6M12 11v6M17 11v6" stroke-linecap="round"/></svg></button>
+                <div id="battery-options" class="battery-options hidden" role="group" aria-label="Play timer"><p>Play timer</p><button type="button" data-minutes="2" aria-pressed="false">2 min</button><button type="button" data-minutes="5" aria-pressed="false">5 min</button><button type="button" data-minutes="10" aria-pressed="false">10 min</button></div>
+            </div>
+            <button id="mute-btn" class="control-btn" title="Toggle Sound" aria-label="Mute sound" aria-pressed="false"><span class="sound-on" aria-hidden="true">🔊</span><span class="sound-off hidden" aria-hidden="true">🔇</span></button>
+            <button id="exit-btn" class="control-btn exit-btn" title="Exit Play Mode" aria-label="Exit play mode">✕</button>
+        </div>
+        <div id="battery-low-screen" class="battery-low-screen hidden" tabindex="-1" role="region" aria-labelledby="battery-low-title"><svg class="battery-low-icon" width="112" height="72" viewBox="0 0 112 72" fill="none" aria-hidden="true"><rect x="4" y="8" width="94" height="56" rx="10" stroke="currentColor" stroke-width="5"/><path d="M106 26v20" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><rect x="14" y="18" width="14" height="36" rx="4" fill="currentColor"/></svg><h1 id="battery-low-title">Battery low</h1><button id="battery-recharge-btn" type="button">⚡ Power Up</button></div>
+        <div id="default-mode" class="game-mode"><div id="animation-container"></div><div class="play-hint"><p>Press any key to play!</p></div></div>
+        <div id="animal-mode" class="game-mode hidden"><input id="animal-mobile-input" class="animal-mobile-input" type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" tabindex="-1" aria-label="Type a letter to show an animal"><div class="animal-display"><div class="letter-display" id="animal-letter">A</div><div class="animal-emoji" id="animal-emoji">🐜</div><div class="animal-name" id="animal-name">Ant</div></div><div class="mode-hint"><p>Press a letter key to explore!</p></div></div>
+        <div id="color-mode" class="game-mode hidden"><div id="rainbow-canvas"></div><div id="splash-container"></div><div class="mode-hint"><p>Move mouse for trails! Click for splash!</p></div></div>
+        <div id="bubble-mode" class="game-mode hidden"><div id="bubble-container"></div><div class="bubble-score"><span class="score-label">Popped:</span><span id="bubble-count">0</span><span class="bubble-emoji">🫧</span></div><div class="mode-hint"><p>Pop the bubbles!</p></div></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
