@@ -67,6 +67,10 @@ let bubbleSpawnInterval = null;
 let audioContext = null;
 let followerFrame = null;
 let returnFocus = null;
+let playTimer = null;
+let playDeadline = null;
+let selectedPlayMinutes = null;
+let isBatteryLow = false;
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const effectTimers = new Set();
 
@@ -86,6 +90,11 @@ const landingPage = document.getElementById('landing-page');
 const playArea = document.getElementById('play-area');
 const muteBtn = document.getElementById('mute-btn');
 const exitBtn = document.getElementById('exit-btn');
+const playControls = document.querySelector('.play-controls');
+const batteryBtn = document.getElementById('battery-btn');
+const batteryOptions = document.getElementById('battery-options');
+const batteryLowScreen = document.getElementById('battery-low-screen');
+const batteryRechargeBtn = document.getElementById('battery-recharge-btn');
 const soundOnIcon = muteBtn?.querySelector('.sound-on');
 const soundOffIcon = muteBtn?.querySelector('.sound-off');
 
@@ -98,6 +107,7 @@ const animationContainer = document.getElementById('animation-container');
 const animalLetter = document.getElementById('animal-letter');
 const animalEmoji = document.getElementById('animal-emoji');
 const animalName = document.getElementById('animal-name');
+const animalMobileInput = document.getElementById('animal-mobile-input');
 const rainbowCanvas = document.getElementById('rainbow-canvas');
 const splashContainer = document.getElementById('splash-container');
 const bubbleContainer = document.getElementById('bubble-container');
@@ -279,8 +289,9 @@ function startMode(mode) {
     // Hide all modes first
     hideAllModes();
     
-    // Enter fullscreen
-    enterFullscreen();
+    // Mobile browsers need a focused text input outside fullscreen for their keyboard.
+    const mobileAnimal = mode === 'animal' && isMobileAnimalMode();
+    if (!mobileAnimal) enterFullscreen();
     
     // Initialize audio
     initAudio();
@@ -302,13 +313,11 @@ function startMode(mode) {
     }
     
     // Focus for keyboard events
-    playArea.focus({ preventScroll: true });
+    if (mobileAnimal) focusAnimalMobileInput();
+    else playArea.focus({ preventScroll: true });
 }
 
-function exitPlayMode() {
-    if (!isPlaying) return;
-    isPlaying = false;
-    currentMode = null;
+function clearPlayEffects() {
     effectTimers.forEach(timer => clearTimeout(timer));
     effectTimers.clear();
     document.querySelectorAll('.sparkle-particle, .pop-particle').forEach(el => el.remove());
@@ -331,6 +340,64 @@ function exitPlayMode() {
     // Reset bubble score
     bubbleScore = 0;
     if (bubbleCount) bubbleCount.textContent = '0';
+}
+
+function closeBatteryOptions() {
+    batteryOptions.classList.add('hidden');
+    batteryBtn.setAttribute('aria-expanded', 'false');
+}
+
+function resetPlayTimer() {
+    clearTimeout(playTimer);
+    playTimer = null;
+    playDeadline = null;
+    closeBatteryOptions();
+    batteryBtn.setAttribute('aria-label', 'Set play timer');
+    batteryBtn.title = 'Set play timer';
+    batteryOptions.querySelectorAll('button').forEach(button => {
+        button.setAttribute('aria-pressed', 'false');
+    });
+}
+
+function showBatteryLow() {
+    if (!isPlaying) return;
+    isPlaying = false;
+    isBatteryLow = true;
+    resetPlayTimer();
+    clearPlayEffects();
+    hideAllModes();
+    playControls.classList.add('hidden');
+    batteryLowScreen.classList.remove('hidden');
+    if (audioContext?.state === 'running') audioContext.suspend().catch(() => {});
+    batteryLowScreen.focus({ preventScroll: true });
+}
+
+function setPlayTimer(minutes) {
+    if (!isPlaying || ![2, 5, 10].includes(minutes)) return;
+    selectedPlayMinutes = minutes;
+    clearTimeout(playTimer);
+    playDeadline = Date.now() + minutes * 60 * 1000;
+    playTimer = setTimeout(showBatteryLow, minutes * 60 * 1000);
+    batteryOptions.querySelectorAll('button').forEach(button => {
+        button.setAttribute('aria-pressed', String(Number(button.dataset.minutes) === minutes));
+    });
+    batteryBtn.setAttribute('aria-label', `Play timer: ${minutes} minutes. Change play timer`);
+    batteryBtn.title = `Play timer: ${minutes} minutes`;
+    closeBatteryOptions();
+    if (currentMode === 'animal' && isMobileAnimalMode()) focusAnimalMobileInput();
+    else playArea.focus({ preventScroll: true });
+}
+
+function exitPlayMode() {
+    if (!isPlaying && !isBatteryLow) return;
+    isPlaying = false;
+    isBatteryLow = false;
+    currentMode = null;
+    selectedPlayMinutes = null;
+    resetPlayTimer();
+    clearPlayEffects();
+    batteryLowScreen.classList.add('hidden');
+    playControls.classList.remove('hidden');
     
     // Hide play area, show landing
     playArea.classList.add('hidden');
@@ -491,6 +558,7 @@ function createBubbles(x, y, count = 5) {
     }
 }
 
+
 function triggerDefaultAnimation(key) {
     const pos = getRandomPosition();
     createShape(pos.x, pos.y);
@@ -565,7 +633,7 @@ function createClickSparkles(x, y) {
     
     for (let i = 0; i < particleCount; i++) {
         const sparkle = document.createElement('div');
-  sparkle.className = 'sparkle-particle';
+        sparkle.className = 'sparkle-particle';
         
         const angle = (i / particleCount) * Math.PI * 2;
         const distance = 30 + Math.random() * 20;
@@ -588,6 +656,29 @@ function createClickSparkles(x, y) {
 // ============================================
 // Animal Mode
 // ============================================
+function isMobileAnimalMode() {
+    return window.matchMedia('(any-pointer: coarse), (max-width: 768px)').matches;
+}
+
+function focusAnimalMobileInput() {
+    animalMobileInput.value = '';
+    animalMobileInput.focus({ preventScroll: true });
+}
+
+function handleAnimalMobileInput(event) {
+    if (event.isComposing || !isPlaying || currentMode !== 'animal') return;
+    const letters = animalMobileInput.value.match(/[a-z]/gi);
+    if (letters?.length) handleAnimalKeyPress(letters[letters.length - 1]);
+    animalMobileInput.value = '';
+}
+
+animalMobileInput.addEventListener('input', handleAnimalMobileInput);
+animalMobileInput.addEventListener('compositionend', handleAnimalMobileInput);
+// Tapping the animal reopens the keyboard if it was dismissed.
+animalMode.addEventListener('click', () => {
+    if (isPlaying && currentMode === 'animal' && isMobileAnimalMode()) focusAnimalMobileInput();
+});
+
 function startAnimalMode() {
     if (animalMode) {
         animalMode.classList.remove('hidden');
@@ -599,7 +690,7 @@ function startAnimalMode() {
 function updateAnimalDisplay(key) {
     const animal = ANIMALS[key.toLowerCase()];
     if (!animal) return false;
-    
+
     // Update display with animation
     if (animalLetter) {
         animalLetter.textContent = key.toUpperCase();
@@ -892,15 +983,44 @@ if (exitBtn) {
 }
 
 // Keyboard input
+batteryBtn.addEventListener('click', () => {
+    if (!isPlaying) return;
+    const opening = batteryOptions.classList.contains('hidden');
+    batteryOptions.classList.toggle('hidden', !opening);
+    batteryBtn.setAttribute('aria-expanded', String(opening));
+    if (opening) batteryOptions.querySelector('button').focus();
+});
+
+batteryOptions.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => setPlayTimer(Number(button.dataset.minutes)));
+});
+
+batteryRechargeBtn.addEventListener('click', exitPlayMode);
+
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.battery-control')) closeBatteryOptions();
+});
+
 document.addEventListener('keydown', (e) => {
+    if (isBatteryLow) {
+        if (e.key === 'Escape') exitPlayMode();
+        else if (!e.target.closest('#battery-recharge-btn') && !['Tab', 'F11', 'F12'].includes(e.key)) e.preventDefault();
+        return;
+    }
     if (!isPlaying) return;
     
     // ESC to exit
     if (e.key === 'Escape') {
+        if (!batteryOptions.classList.contains('hidden')) {
+            closeBatteryOptions();
+            batteryBtn.focus();
+            return;
+        }
         exitPlayMode();
         return;
     }
-    if (e.key === 'Tab') return;
+    // Native keyboards deliver letters through input events, not reliably through keydown.
+    if (e.target === animalMobileInput && e.key !== 'Tab') return;
     if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.play-controls')) return;
     const focusedBubble = e.target.closest('.bubble');
     if (focusedBubble && (e.key === 'Enter' || e.key === ' ')) {
@@ -953,6 +1073,7 @@ document.addEventListener('click', (e) => {
     
     // Don't trigger on control buttons
     if (e.target.closest('.play-controls')) return;
+    if (e.target.closest('#battery-low-screen')) return;
     if (e.target.closest('#landing-page')) return;
     
     if (currentMode === 'default') {
@@ -971,8 +1092,8 @@ document.addEventListener('touchstart', (e) => {
     
     // Don't prevent on controls
     if (e.target.closest('.play-controls')) return;
-    // Let the browser synthesize a click so bubble taps reach their handler.
-    if (currentMode === 'bubble') return;
+    // Let the browser synthesize clicks for bubbles and animal mode.
+    if (currentMode === 'bubble' || currentMode === 'animal') return;
     
     e.preventDefault();
     
@@ -1005,6 +1126,10 @@ document.addEventListener('contextmenu', (e) => {
 
 // Cleanup on visibility change
 document.addEventListener('visibilitychange', () => {
+    // Enforce elapsed time when returning from a background tab or sleeping device.
+    if (!document.hidden && isPlaying && playDeadline !== null && Date.now() >= playDeadline) {
+        showBatteryLow();
+    }
     if (document.hidden && followerFrame !== null) {
         cancelAnimationFrame(followerFrame);
         followerFrame = null;
@@ -1051,7 +1176,7 @@ function initCommunityMap() {
         { name: 'London, UK', lat: 51.5, lon: -0.1 },
         { name: 'Paris, France', lat: 48.9, lon: 2.4 },
         { name: 'Berlin, Germany', lat: 52.5, lon: 13.4 },
-        { name: 'Lagos, Nigeria', lat: 6.5, lon: 3.4 },
+         { name: 'Lagos, Nigeria', lat: 6.5, lon: 3.4 },
         { name: 'Cape Town, South Africa', lat: -33.9, lon: 18.4 },
         { name: 'Dubai, UAE', lat: 25.2, lon: 55.3 },
         { name: 'Mumbai, India', lat: 19.1, lon: 72.9 },
@@ -1110,3 +1235,4 @@ if (document.readyState === 'loading') {
 
 // Log ready
 console.log('🎨 KeySafari loaded! Ready for joyful play.');
+
