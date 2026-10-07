@@ -689,8 +689,24 @@ section {
     pointer-events: none;
 }
 
-.play-hint { position: absolute; bottom: var(--spacing-lg); left: 50%; transform: translateX(-50%); background: rgba(255, 255, 255, 0.9); padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); animation: pulse 2s ease-in-out infinite; }
+/*.play-hint { position: absolute; bottom: var(--spacing-lg); left: 50%; transform: translateX(-50%); background: rgba(255, 255, 255, 0.9); padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); animation: pulse 2s ease-in-out infinite; }
+*/
+.play-hint {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
+.play-hint.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
 .play-hint p {
     font-size: 1.25rem;
     font-weight: 600;
