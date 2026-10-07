@@ -582,6 +582,107 @@ section {
     outline-offset: 3px;
 }
 
+.battery-control {
+    position: relative;
+}
+
+.battery-options {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 170px;
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    background: var(--white);
+    box-shadow: var(--shadow-medium);
+    cursor: default;
+}
+
+.battery-options p {
+    padding: 0 8px 6px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--text-secondary);
+}
+
+.battery-options button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-primary);
+    font: inherit;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+}
+
+.battery-options button:hover,
+.battery-options button[aria-pressed="true"] {
+    background: var(--lavender);
+}
+
+.battery-low-screen {
+    position: absolute;
+    inset: 0;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px;
+    background: #000;
+    color: #fff;
+    cursor: default;
+}
+
+.battery-low-screen h1 {
+    font-size: clamp(2rem, 7vw, 4rem);
+    font-weight: 700;
+    text-align: center;
+    animation: battery-low-pop 2.4s ease-in-out infinite;
+}
+
+.battery-low-icon {
+    flex-shrink: 0;
+    color: #ff7777;
+    animation: battery-low-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes battery-low-pop {
+    0%, 100% { transform: scale(1); }
+    35% { transform: scale(0.9); }
+    65% { transform: scale(1.08); }
+}
+
+@keyframes battery-low-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+}
+
+.battery-low-screen button {
+    padding: 10px 20px;
+    border: 1px solid #666;
+    border-radius: 12px;
+    background: #000;
+    color: #ccc;
+    font: inherit;
+    cursor: pointer;
+}
+
+.battery-low-screen button:hover {
+    background: #222;
+    color: #fff;
+}
+
+.battery-low-screen button:focus-visible {
+    outline: 3px solid #ff7777;
+    outline-offset: 4px;
+}
+
 #animation-container {
     position: absolute;
     inset: 0;
@@ -800,6 +901,21 @@ section {
     text-align: center;
     animation: bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
+.animal-mobile-input {
+    /* Keep the input focusable for the native keyboard without adding visible UI. */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    font-size: 16px;
+    pointer-events: none;
+}
+
 
 @keyframes bounceIn {
     0% { transform: scale(0); opacity: 0; }
@@ -1452,7 +1568,8 @@ section {
     #play-area { cursor: default; }
     .bg-shape, .game-mode, .play-hint, .mode-hint,
     .animal-display, .letter-display, .animal-emoji, .animal-name,
-    .bubble, .bubble-score, .follower-main {
+    .bubble, .bubble-score, .follower-main,
+    .battery-low-screen h1, .battery-low-icon {
         animation: none !important;
     }
     .animation-shape, .floating-letter, .rainbow-dot,
@@ -1463,5 +1580,3 @@ section {
     .bubble-pop { opacity: 0; }
     .mouse-follower, .follower-trail { display: none !important; }
 }
-
-
