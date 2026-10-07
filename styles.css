@@ -694,24 +694,21 @@ section {
     bottom: var(--spacing-lg);
     left: 50%;
     transform: translateX(-50%);
+    background: rgba(255, 255, 255,.play-hint {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
     background: rgba(255, 255, 255, 0.9);
     padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
-
-    animation: hidePlayHint 3s ease-in-out forwards;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-@keyframes hidePlayHint {
-    0%, 75% {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
+.play-hint.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .play-hint p {
