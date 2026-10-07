@@ -698,7 +698,20 @@ section {
     padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
-    animation: pulse 2s ease-in-out infinite;
+
+    animation: hidePlayHint 3s ease-in-out forwards;
+}
+
+@keyframes hidePlayHint {
+    0%, 75% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .play-hint p {
