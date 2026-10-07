@@ -1055,6 +1055,10 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+document.addEventListener('keydown', () => {
+    document.querySelector('.play-hint')?.classList.add('hidden');
+}, { once: true });
+
 // Mouse move
 document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
