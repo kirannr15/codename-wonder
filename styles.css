@@ -1191,6 +1191,9 @@ section {
    Responsive Design
    ============================================ */
 @media (max-width: 768px) {
+    .play-controls{
+        flex-direction:column-reverse;
+    }
     .bg-shape {
         opacity: 0.4;
     }
